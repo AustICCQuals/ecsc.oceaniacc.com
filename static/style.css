@@ -270,6 +270,7 @@ section p:last-child {
 
 .sponsor-img {
   height: 8rem;
+  background: white;
 }
 
 .entity-card img.sponsor-logo {
@@ -281,14 +282,31 @@ section p:last-child {
   margin: 5vh 20vh;
 }
 
-.sponsor-gold {
+.platinum-sponsor-group h3 {
+  color: #c0c0c0;
+  font-size: 1.7rem;
+}
+
+.platinum-sponsor-group .sponsor-img {
+  height: 12rem;
+}
+
+.gold-sponsor-group h3 {
   color: #d3af37;
   font-size: 1.7rem;
 }
 
-.sponsor-silver {
+.gold-sponsor-group .sponsor-img {
+  height: 10rem;
+}
+
+.silver-sponsor-group h3 {
   color: #c0c0c0;
   font-size: 1.7rem;
+}
+
+.silver-sponsor-group .sponsor-img {
+  height: 8rem;
 }
 
 .player-pfp {
