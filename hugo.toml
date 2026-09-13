@@ -2,4 +2,3 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'Team Australia ECSC'
 disableKinds = ['taxonomy', 'term', 'sitemap', 'RSS']
-publishDir = "doc"
