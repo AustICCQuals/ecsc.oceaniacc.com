@@ -5,7 +5,7 @@ layout = "player"
 [params]
   handle = "stackotter"
   name = "Rohan van Klinken"
-  icon = "stackotter.png"
+  icon = "stackotter.webp"
   website = "https://stackotter.dev/"
 +++
 

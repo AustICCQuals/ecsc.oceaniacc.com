@@ -4,7 +4,7 @@ draft = false
 layout = "player"
 [params]
   handle = "APender"
-  icon = "apender.png"
+  icon = "apender.webp"
   website = "https://apendergh.github.io/"
 +++
 

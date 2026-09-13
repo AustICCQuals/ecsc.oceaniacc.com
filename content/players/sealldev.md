@@ -5,7 +5,7 @@ layout = "player"
 [params]
   handle = "sealldev"
   name = "Noah"
-  icon = "sealldev.png"
+  icon = "sealldev.webp"
   website = "https://seall.dev/"
 +++
 
