@@ -5,8 +5,9 @@
   --dark-fg: #000000;
   --nav-link: #000000;
   --page-bg: #f8f3e9;
-  --nav-bg: #fffcf890;
+  --nav-bg: var(--page-bg);
   --nav-height: 4rem;
+  --max-hero-image-width: 200ch;
   --skippy-yellow: #fed70a;
   --content-width: min(80ch, 95vw);
 }
@@ -35,12 +36,9 @@ nav {
   background: var(--nav-bg);
   padding: 0 1.5rem;
   box-sizing: border-box;
-
-  /* position over hero image */
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+  box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.3);
 
   /* blurred background */
   backdrop-filter: blur(10px);
@@ -135,7 +133,8 @@ section {
 
 section p {
   width: var(--content-width);
-  padding: 0 2rem;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
   text-align: left;
   margin: auto;
   margin-bottom: 1rem;
@@ -157,7 +156,7 @@ section p:last-child {
 }
 
 #content {
-  padding-top: calc(2rem + var(--nav-height));
+  padding-top: 2rem;
   min-height: 100vh;
   width: min(80ch, 95%);
   text-align: left;
@@ -185,6 +184,7 @@ section p:last-child {
 #hero-image {
   width: 100%;
   height: 100%;
+  max-width: var(--max-hero-image-width);
   object-fit: cover;
   object-position: top;
 }
@@ -192,9 +192,10 @@ section p:last-child {
 #hero-image-overlay {
   position: absolute;
   top: 0;
-  left: 0;
+  left: calc(50% - min(50%, var(--max-hero-image-width) * 0.5));
   width: 100%;
   height: 100%;
+  max-width: var(--max-hero-image-width);
   background: #00000050;
 }
 
@@ -309,6 +310,11 @@ section p:last-child {
   height: 8rem;
 }
 
+.video-embed {
+  width: var(--content-width);
+  margin: auto;
+}
+
 .player-pfp {
   width: 8rem;
 }
@@ -328,10 +334,6 @@ section p:last-child {
     height: 2rem;
   }
 
-  section {
-    padding: 1.5rem;
-  }
-
   h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -342,9 +344,12 @@ section p:last-child {
     padding: 0.5rem 1rem;
   }
 
-  #hero-section .overlay {
-    padding: 0;
-    padding-bottom: 1rem;
+  section h2 {
+    padding: 1rem;
+  }
+
+  #hero-section {
+    padding: 2.5rem;
   }
 
   #hero-section .button-row {
@@ -354,15 +359,15 @@ section p:last-child {
 
   .placing-icon {
     font-size: 2rem;
-    height: 3rem;
+    height: 4rem;
   }
 
   .placing-icon img {
-    height: 3rem;
+    height: 4rem;
   }
 
   .placing-card {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   #performance-section {
@@ -380,5 +385,18 @@ section p:last-child {
 
   .entity-card {
     font-size: 0.8rem;
+  }
+
+  .sponsor-img {
+    height: 8rem !important;
+  }
+
+  .sponsor-row {
+    flex-wrap: wrap !important;
+    flex-direction: column;
+  }
+
+  .slide-caption {
+    font-size: 1rem;
   }
 }
