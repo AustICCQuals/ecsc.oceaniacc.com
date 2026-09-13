@@ -6,6 +6,9 @@
       {{ if .Params.name }}
         <h3>(aka {{ .Params.name }})</h3>
       {{ end }}
+      {{ if .Params.website }}
+        Website: <a href="{{ .Params.website }}">{{ .Params.website }}</a>
+      {{ end }}
     </div>
     {{ .Content }}
     <a href="/players">Back to players</a>
